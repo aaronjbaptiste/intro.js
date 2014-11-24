@@ -1,0 +1,16 @@
+.introjs-skipbutton {
+	display:none;
+}
+
+.introjs-skipbutton.introjs-donebutton {
+	display:inline;
+}
+
+.introjs-button.introjs-disabled {
+	display: none;
+}
+
+.introjs-prevbutton {
+	display: none;
+}
+
