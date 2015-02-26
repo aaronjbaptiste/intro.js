@@ -310,6 +310,10 @@
       this._introBeforeChangeCallback.call(this, nextStep.element);
     }
 
+    if (typeof (nextStep.before) !== 'undefined') {
+      nextStep.before.call();
+    }
+
     _showElement.call(this, nextStep);
   }
 
@@ -329,6 +333,10 @@
     var nextStep = this._introItems[--this._currentStep];
     if (typeof (this._introBeforeChangeCallback) !== 'undefined') {
       this._introBeforeChangeCallback.call(this, nextStep.element);
+    }
+
+    if (typeof (nextStep.before) !== 'undefined') {
+      nextStep.before.call();
     }
 
     _showElement.call(this, nextStep);
@@ -500,7 +508,7 @@
         tooltipOffset = _getOffset(tooltipLayer);
 
         tooltipLayer.style.left   = '50%';
-        tooltipLayer.style.top    = '50%';
+        tooltipLayer.style.top    = '10%';
         tooltipLayer.style.marginLeft = '-' + (tooltipOffset.width / 2)  + 'px';
         tooltipLayer.style.marginTop  = '-' + (tooltipOffset.height / 2) + 'px';
 
@@ -632,6 +640,8 @@
       if (currentElement.position == 'floating') {
         widthHeightPadding = 0;
       }
+
+      console.log(currentElement);
 
       //set new position to helper layer
       helperLayer.setAttribute('style', 'width: ' + (elementPosition.width  + widthHeightPadding)  + 'px; ' +
@@ -977,6 +987,12 @@
     if (typeof (this._introAfterChangeCallback) !== 'undefined') {
       this._introAfterChangeCallback.call(this, targetElement.element);
     }
+
+    if (typeof (targetElement.after) !== 'undefined') {
+      targetElement.after.call();
+    }
+
+
   }
 
   /**
