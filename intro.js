@@ -539,11 +539,8 @@
         //we have to adjust the top and left of layer manually for intro items without element
         tooltipOffset = _getOffset(tooltipLayer);
 
-<<<<<<< HEAD
         tooltipLayer.style.left   = '50%';
         tooltipLayer.style.top    = '10%';
-=======
->>>>>>> remotes/Widen/feature/element-late-binding
         tooltipLayer.style.marginLeft = '-' + (tooltipOffset.width / 2)  + 'px';
         tooltipLayer.style.top = ((document.documentElement.clientHeight / 2) - tooltipOffset.height) + 'px';
         tooltipLayer.className += ' floating';
