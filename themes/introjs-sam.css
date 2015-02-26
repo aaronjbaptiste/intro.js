@@ -14,3 +14,84 @@
 	display: none;
 }
 
+.introjs-tooltiptext {
+	padding: 20px;
+	text-align: left;
+}
+
+.introjs-tooltiptext h3 {
+	text-align: center;
+}
+
+.introjs-tooltiptext p {
+	margin: 16px;
+}
+
+
+/*.introjs-helperLayer {
+	visibility: hidden;
+}*/
+
+.introjs-overlay {
+	opacity: 0.8;
+	background: #000;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+	-webkit-transition: initial;
+    -moz-transition: initial;
+    -ms-transition: initial;
+    -o-transition: initial;
+    transition: initial;
+}
+
+.introjs-tooltip {
+	box-shadow: initial;
+	max-width: 9999px;
+	text-align: center;
+}
+
+.introjs-tooltip img {
+	border: 0;
+	max-width: none;
+	width: auto;
+	height: auto;
+	margin: 10px 0 10px 0;
+}
+
+.introjs-tooltip h2 {
+	font-size: 34px;
+	margin-bottom: 25px;
+	margin-top: 10px;
+}
+
+.introjs-tooltip h3 {
+	font-size: 18px;
+	margin-bottom: 25px;
+	font-weight: normal;
+	line-height: 26px;
+	margin-top: 10px;
+}
+
+.introjs-tooltip p {
+	font-size: 18px;
+	line-height: 22px
+}
+
+#fullCover {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 1;
+	background: #fff;
+	z-index: 99999;
+}
+
+.introjs-tooltipReferenceLayer {
+	/*top: 0;*/
+}
+
+.introjs-tooltip {
+	/*margin-top: 80px !important;*/
+}
+
