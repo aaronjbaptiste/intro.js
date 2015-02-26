@@ -200,9 +200,9 @@ tr.introjs-showElement > th {
           transition: opacity 0.1s ease-out;
 }
 
-.introjs-tooltip.floating {
+/*.introjs-tooltip.floating {
   position: fixed;
-}
+}*/
 
 .introjs-tooltipbuttons {
   text-align: right;

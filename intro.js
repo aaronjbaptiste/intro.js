@@ -286,8 +286,8 @@
           if (typeof (this._introBeforeChangeCallback) !== 'undefined') {
             self._introBeforeChangeCallback.call(self, step.element);
           }
-          if (typeof (nextStep.before) !== 'undefined') {
-            nextStep.before.call();
+          if (typeof (step.before) !== 'undefined') {
+            step.before.call();
           }
           _showElement.call(self, step);
         }
@@ -540,9 +540,8 @@
         tooltipOffset = _getOffset(tooltipLayer);
 
         tooltipLayer.style.left   = '50%';
-        tooltipLayer.style.top    = '10%';
         tooltipLayer.style.marginLeft = '-' + (tooltipOffset.width / 2)  + 'px';
-        tooltipLayer.style.top = ((document.documentElement.clientHeight / 2) - tooltipOffset.height) + 'px';
+        tooltipLayer.style.top = -(tooltipOffset.height / 2) + 'px';
         tooltipLayer.className += ' floating';
 
         if (typeof(helperNumberLayer) != 'undefined' && helperNumberLayer != null) {
